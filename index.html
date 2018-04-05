@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Color</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.6.2/pixi.min.js"></script>
+    <script src="AQuery.js"></script>
+    <script src="HashBounds.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <style>
+        #background {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        
+        #info {
+            position: absolute;
+            z-index: 100;
+        }
+        
+        #controls,
+        #info {
+            z-index: 100;
+            position: absolute;
+            opacity: 0.3;
+            transition: .5s;
+            margin-top: 2px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            padding-left: 10px;
+            padding-right: 10px;
+            text-align: center;
+            border-radius: 3px;
+        }
+        
+        #controls {
+            right: 10px;
+        }
+        
+        #info {
+            left: 10px;
+            opacity: .5;
+        }
+        
+        #controls:hover,
+        #info:hover {
+            opacity: 1;
+        }
+        
+        #controls i {
+            opacity: .8;
+            cursor: pointer;
+            line-height: 20px;
+            color: #707070;
+            font-size: 10px;
+            padding-left: 1px;
+            padding-right: 1px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id='info'>Discovered 0 Colors</div>
+    <div id='controls'>
+        <i id='play' class='fa fa-pause'></i>
+        <i id='refresh' class='fa fa-refresh'></i>
+    </div>
+    <div id='background'></div>
+    <script src='main.js'></script>
+</body>
+
+</html>
